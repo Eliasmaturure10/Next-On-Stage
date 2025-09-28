@@ -1,9 +1,8 @@
 import SpotifyService from './spotifyService';
+import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '@env';
 
 // Configuration for environment variables
-// In a real app, you would get these from your environment variables
-const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID || '';
-const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET || '';
+// Environment variables are loaded from .env file via react-native-dotenv
 
 // Create singleton instance
 const spotifyService = new SpotifyService(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET);
